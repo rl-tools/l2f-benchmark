@@ -15,11 +15,11 @@ namespace rlt = RL_TOOLS_NAMESPACE_WRAPPER ::rl_tools;
 #include <cassert>
 
 using T = float;
-constexpr size_t N_BLOCKS = 64 * 16;
-constexpr size_t N_BLOCKS_CPU = 1;
-constexpr size_t N_THREADS = 128;
+constexpr size_t N_BLOCKS = 4096;
+constexpr size_t N_BLOCKS_CPU = 16;
+constexpr size_t N_THREADS = 512;
 constexpr size_t N_THREADS_CPU = 1;
-constexpr size_t N_ITERATIONS = 1000000;
+constexpr size_t N_ITERATIONS = 100000;
 
 using DEVICE_GPU = rlt::devices::CUDA<rlt::devices::DefaultCUDASpecification>;
 using DEVICE_CPU = rlt::devices::CPU<rlt::devices::DefaultCPUSpecification>;
